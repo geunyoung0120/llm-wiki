@@ -1,0 +1,6 @@
+interface:
+  display_name: "Study Save"
+  short_description: "Explicitly send learning context to Codex for integration into one vault"
+  default_prompt: "Use $study-save to integrate this learning session into my shared knowledge vault."
+policy:
+  allow_implicit_invocation: false

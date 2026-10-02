@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""Foreground commands; importing the module performs no operation."""
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from study_save import main
+
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    if Path(sys.argv[0]).name == "study-load":
+        args = ["load", *args]
+    elif not args or args[0] not in {"save", "load"}:
+        args = ["save", *args]
+    raise SystemExit(main(args))

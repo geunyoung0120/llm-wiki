@@ -1,0 +1,6 @@
+interface:
+  display_name: "Study Load"
+  short_description: "Explicitly retrieve prior learning and open questions without saving"
+  default_prompt: "Use $study-load to retrieve prior learning about the topic I name."
+policy:
+  allow_implicit_invocation: false

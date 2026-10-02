@@ -1,0 +1,26 @@
+name: Synthetic regression tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Prepare optional MCP runtime
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements-chat.lock
+      - name: Run model-free synthetic tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: .venv/bin/python -m unittest discover -s tests -q
