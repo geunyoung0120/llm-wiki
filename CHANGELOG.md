@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Rename the public repository and project to **LLM Wiki** (`llm-wiki`) to reflect knowledge integration and retrieval together.
+- Keep `study-save`, `study-load`, installation paths, and configuration compatible. The original v0.1.0 source archive remains available.
+
 ## 0.1.0 — Preview
 
 First sanitized public distribution, derived from a private implementation.

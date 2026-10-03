@@ -1,6 +1,8 @@
-# Study Save
+# LLM Wiki
 
-Turn an explicitly selected AI learning session into reusable Obsidian knowledge, with **Codex as the knowledge-management agent**.
+Build and maintain a personal knowledge wiki from AI learning conversations, with **Codex as the knowledge-management agent** and Obsidian as the initial Markdown store.
+
+LLM Wiki includes both `study-save` and `study-load`. Knowledge organization runs automatically after an explicit user command; saving is never triggered automatically. The repository was previously named `study-save`. Existing command names, skill names, and configuration paths remain compatible.
 
 Study with GPT or Claude. Invoke `study-save` when you choose to preserve the lesson. Codex reads existing notes, updates or creates concepts, connects related knowledge, and retains corrections and open questions. Invoke `study-load` to retrieve knowledge for the next conversation.
 
@@ -40,7 +42,14 @@ Codex/model service access is required. Provider access and usage limits depend 
 
 ## Install the common local engine
 
-Clone/download this repository and keep it at a stable path. Run from its root:
+Clone/download this repository and keep it at a stable path:
+
+```sh
+git clone https://github.com/geunyoung0120/llm-wiki.git
+cd llm-wiki
+```
+
+Run from its root:
 
 ```sh
 python3 --version

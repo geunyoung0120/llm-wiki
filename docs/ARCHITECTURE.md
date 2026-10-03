@@ -1,4 +1,4 @@
-# Architecture and maintenance history
+# LLM Wiki — architecture and maintenance history
 
 This document describes the public v0.1.0 preview. It is reference material, not permission to run a study operation. Runtime instructions are in `policy.md` and the shared skills.
 
